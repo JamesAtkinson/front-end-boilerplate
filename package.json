@@ -2,6 +2,8 @@
     "name": "front-end-boilerplate",
     "version": "1.0.0",
     "devDependencies": {
-        "gulp": "^4.0.2"
+        "gulp": "^4.0.2",
+        "gulp-sass": "^4.0.2",
+        "node-sass": "^4.12.0"
     }
 }

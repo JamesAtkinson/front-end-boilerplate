@@ -1,4 +1,4 @@
-const { src, dest, parallel } = require('gulp');
+const { src, dest, watch } = require('gulp');
 const sass = require('gulp-sass');
 
 function css() {
@@ -7,5 +7,6 @@ function css() {
         .pipe(dest('css'))
 }
 
-exports.css = css;
-exports.default = parallel(css);
+exports.default = function() {
+    watch('sass/**/*.scss', css)
+}

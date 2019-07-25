@@ -5,6 +5,8 @@ const postcss = require('gulp-postcss');
 const sass = require('gulp-sass');
 const stylelint = require('gulp-stylelint');
 
+sass.compiler = require('sass');
+
 function css() {
     return src('sass/**/*.scss')
         .pipe(sass())

@@ -1,5 +1,6 @@
 const autoprefixer = require('autoprefixer');
-const { src, dest, watch } = require('gulp');
+const browsersync = require('browser-sync');
+const { src, dest } = require('gulp');
 const postcss = require('gulp-postcss');
 const sass = require('gulp-sass');
 const stylelint = require('gulp-stylelint');
@@ -20,7 +21,14 @@ function lint() {
         }))
 }
 
-exports.lint = lint;
-exports.default = function() {
-    watch('sass/**/*.scss', css)
+function serve() {
+    browsersync.init({
+        server: {
+            baseDir: "./"
+        }
+    })
 }
+
+exports.css = css;
+exports.lint = lint;
+exports.serve = serve;

@@ -1,6 +1,6 @@
 const autoprefixer = require('autoprefixer');
 const browsersync = require('browser-sync');
-const { src, dest } = require('gulp');
+const { src, dest, watch, series } = require('gulp');
 const postcss = require('gulp-postcss');
 const sass = require('gulp-sass');
 const stylelint = require('gulp-stylelint');
@@ -10,6 +10,7 @@ function css() {
         .pipe(sass())
         .pipe(postcss([autoprefixer()]))
         .pipe(dest('css'))
+        .pipe(browsersync.stream())
 }
 
 function lint() {
@@ -26,9 +27,12 @@ function serve() {
         server: {
             baseDir: "./"
         }
-    })
+    });
+    watch('sass/**/*.scss', css);
+    watch('*.html').on('change', browsersync.reload)
 }
 
 exports.css = css;
 exports.lint = lint;
 exports.serve = serve;
+exports.default = series(css, serve);

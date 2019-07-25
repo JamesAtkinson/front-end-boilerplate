@@ -8,8 +8,11 @@
         "gulp-postcss": "^8.0.0",
         "gulp-sass": "^4.0.2",
         "gulp-stylelint": "^9.0.0",
-        "node-sass": "^4.12.0",
+        "sass": "^1.22.7",
         "stylelint": "^10.1.0",
         "stylelint-config-sass-guidelines": "^6.0.0"
+    },
+    "dependencies": {
+        "normalize.css": "^8.0.1"
     }
 }

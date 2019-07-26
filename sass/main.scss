@@ -1,7 +1,19 @@
-@import 'settings';
-@import 'tools';
-@import 'reset';
-@import 'base';
-@import 'objects';
-@import 'components';
-@import 'helpers';
+// MAIN
+//
+// The main Sass file, import all partials here.
+
+// Settings
+
+// Tools
+
+// Reset
+
+@import 'reset/normalize';
+
+// Base
+
+// Objects
+
+// Components
+
+// Helpers

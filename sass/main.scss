@@ -2,6 +2,10 @@
 //
 // The main Sass file, import all partials here.
 
+// Dependencies
+
+@import 'dependencies/normalize';
+
 // Settings
 
 // Tools
@@ -9,7 +13,8 @@
 // Reset
 
 @import 'reset/box-sizing';
-@import 'reset/normalize';
+@import 'reset/generic';
+@import 'reset/shared';
 
 // Base
 

@@ -1,5 +1,6 @@
 const autoprefixer = require('autoprefixer');
 const browsersync = require('browser-sync');
+const cssnano = require('cssnano');
 const { src, dest, watch, series } = require('gulp');
 const postcss = require('gulp-postcss');
 const sass = require('gulp-sass');
@@ -8,9 +9,13 @@ const stylelint = require('gulp-stylelint');
 sass.compiler = require('sass');
 
 function css() {
+    var plugins = [
+        autoprefixer(),
+        cssnano()
+    ];
     return src('sass/**/*.scss')
         .pipe(sass())
-        .pipe(postcss([autoprefixer()]))
+        .pipe(postcss(plugins))
         .pipe(dest('css'))
         .pipe(browsersync.stream())
 }

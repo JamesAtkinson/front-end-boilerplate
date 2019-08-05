@@ -1,0 +1,14 @@
+// MEDIA-QUERY
+//
+// A simple media query mixin used throughout.
+
+@mixin mq($media-query-value) {
+
+    // Get the breakpoint.
+    $breakpoint: map-get($breakpoints, $media-query-value);
+
+    // Set the media query and content.
+    @media (min-width: $breakpoint) {
+        @content;
+    }
+}

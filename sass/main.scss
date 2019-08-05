@@ -2,16 +2,34 @@
 //
 // The main Sass file, import all partials here.
 
+// Dependencies
+
+@import 'dependencies/normalize';
+
 // Settings
 
+@import 'settings/breakpoints';
+@import 'settings/colour';
+@import 'settings/typography';
+
 // Tools
+
+@import 'tools/base-font-size';
+@import 'tools/font-size';
+@import 'tools/media-query';
+@import 'tools/power';
 
 // Reset
 
 @import 'reset/box-sizing';
-@import 'reset/normalize';
+@import 'reset/generic';
+@import 'reset/shared';
 
 // Base
+
+@import 'base/headings';
+@import 'base/images';
+@import 'base/page';
 
 // Objects
 

@@ -1,0 +1,26 @@
+// FONT-SIZE
+//
+// Generates a responsive font-size.
+
+@mixin font-size($font-size-value) {
+
+    // Loop over each size in $font-sizes.
+    @each $size, $map in $font-sizes {
+
+        // Get the breakpoint and font-scale.
+        $breakpoint: map-get($map, 'breakpoint');
+        $font-scale: map-get($map, 'font-scale');
+
+        // Generate the font-size.
+        $font-size: power($font-scale, $font-size-value) * 1rem;
+
+        // Check for breakpoints and set the font-size.
+        @if $breakpoint == null {
+            font-size: $font-size;
+        } @else {
+            @include mq($breakpoint) {
+                font-size: $font-size;
+            }
+        }
+    }
+}

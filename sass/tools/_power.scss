@@ -1,0 +1,19 @@
+// POWER
+//
+// Function to calculate the power of a number.
+
+@function power($base, $exponent) {
+    $x: 1;
+
+    @if $exponent > 0 {
+        @for $i from 1 through $exponent {
+            $x: $x * $base;
+        }
+    } @else {
+        @for $i from $exponent to 0 {
+            $x: $x / $base;
+        }
+    }
+
+    @return $x;
+}

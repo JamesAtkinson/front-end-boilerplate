@@ -2,16 +2,16 @@
     "name": "front-end-boilerplate",
     "version": "0.1.1",
     "devDependencies": {
-        "autoprefixer": "^9.6.1",
+        "autoprefixer": "^9.6.5",
         "browser-sync": "^2.26.7",
         "cssnano": "^4.1.10",
         "gulp": "^4.0.2",
         "gulp-postcss": "^8.0.0",
         "gulp-sass": "^4.0.2",
         "gulp-stylelint": "^9.0.0",
-        "sass": "^1.22.7",
+        "sass": "^1.23.1",
         "stylelint": "^10.1.0",
-        "stylelint-config-sass-guidelines": "^6.0.0"
+        "stylelint-config-sass-guidelines": "^6.1.0"
     },
     "dependencies": {
         "normalize.css": "^8.0.1"

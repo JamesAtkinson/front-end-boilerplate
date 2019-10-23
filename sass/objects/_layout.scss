@@ -1,0 +1,18 @@
+// LAYOUT
+//
+// A grid-like layout system built with flexbox.
+
+.o-layout {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -$spacer-small;
+    margin-top: -$spacer-small;
+}
+
+// Item
+
+.o-layout__item {
+    padding-left: $spacer-small;
+    padding-top: $spacer-small;
+    width: 100%;
+}

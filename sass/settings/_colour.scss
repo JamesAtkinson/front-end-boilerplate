@@ -2,9 +2,8 @@
 //
 // Colour variables and settings.
 
-$black: #111;
-$white: #fff;
-
-$red: #f00;
-$green: #0f0;
-$blue: #00f;
+$black: hsla(240, 10%, 20%, 1);
+$white: hsla(0, 0%, 100%, 1);
+$red: hsla(360, 100%, 50%, 1);
+$green: hsla(120, 100%, 50%, 1);
+$blue: hsla(240, 100%, 50%, 1);

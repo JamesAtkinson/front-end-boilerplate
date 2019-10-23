@@ -19,11 +19,11 @@ figure,
 hr,
 table,
 fieldset {
-    margin-bottom: 1.5rem;
+    margin-bottom: $spacer-small;
 }
 
 dd,
 ol,
 ul {
-    margin-left: 1.5rem;
+    margin-left: $spacer-small;
 }

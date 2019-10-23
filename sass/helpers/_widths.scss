@@ -1,0 +1,19 @@
+// WIDTHS
+//
+// Generate some width helper classes.
+
+@for $i from 1 through 12 {
+    .h-#{$i} {
+        width: percentage($i / 12);
+    }
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include mq($breakpoint) {
+        @for $i from 1 through 12 {
+            .h-#{$i}-#{$breakpoint} {
+                width: percentage($i / 12);
+            }
+        }
+    }
+}

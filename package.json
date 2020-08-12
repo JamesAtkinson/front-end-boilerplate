@@ -1,0 +1,16 @@
+{
+    "name": "front-end-boilerplate",
+    "version": "0.1.4",
+    "devDependencies": {
+        "autoprefixer": "^9.8.6",
+        "browser-sync": "^2.26.12",
+        "cssnano": "^4.1.10",
+        "gulp": "^4.0.2",
+        "gulp-postcss": "^8.0.0",
+        "gulp-sass": "^4.1.0",
+        "gulp-stylelint": "^13.0.0",
+        "sass": "^1.26.10",
+        "stylelint": "^13.6.1",
+        "stylelint-config-sass-guidelines": "^7.0.0"
+    }
+}

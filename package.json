@@ -2,7 +2,7 @@
     "name": "front-end-boilerplate",
     "version": "0.1.5",
     "devDependencies": {
-        "autoprefixer": "^10.1.0",
+        "autoprefixer": "^9.0.0",
         "browser-sync": "^2.26.13",
         "cssnano": "^4.1.10",
         "gulp": "^4.0.2",

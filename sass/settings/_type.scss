@@ -1,0 +1,32 @@
+// TYPE
+//
+// Type variables and settings.
+
+// Sizes
+
+$sizes: (
+    'small': (
+        'base': 16,
+        'scale': 1.2
+    ),
+    'medium': (
+        'breakpoint': 'medium',
+        'base': 18,
+        'scale': 1.25
+    ),
+    'large': (
+        'breakpoint': 'large',
+        'base': 20,
+        'scale': 1.3
+    )
+);
+
+// Families
+
+$family-sans-serif: 'Work Sans', sans-serif;
+$family-monospace: 'Space Mono', monospace;
+
+// Weights
+
+$weight-regular: 400;
+$weight-semi-bold: 600;

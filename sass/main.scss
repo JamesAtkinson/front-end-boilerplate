@@ -1,45 +1,27 @@
 // MAIN
 //
-// The main Sass file, import all partials here.
-
-// Dependencies
-
-@import 'dependencies/normalize';
-
-// Settings
-
-@import 'settings/breakpoints';
-@import 'settings/colour';
-@import 'settings/spacing';
-@import 'settings/typography';
-
-// Tools
-
-@import 'tools/base-font-size';
-@import 'tools/font-size';
-@import 'tools/media-query';
-@import 'tools/power';
+// The main Sass file, load all modules here.
 
 // Reset
 
-@import 'reset/box-sizing';
-@import 'reset/generic';
-@import 'reset/shared';
+@use 'reset/box-sizing';
+@use 'reset/generic';
+@use 'reset/shared';
 
 // Base
 
-@import 'base/headings';
-@import 'base/images';
-@import 'base/links';
-@import 'base/page';
+@use 'base/headings';
+@use 'base/images';
+@use 'base/links';
+@use 'base/page';
 
 // Objects
 
-@import 'objects/container';
-@import 'objects/layout';
+@use 'objects/container';
+@use 'objects/layout';
 
 // Components
 
 // Helpers
 
-@import 'helpers/widths';
+@use 'helpers/widths';

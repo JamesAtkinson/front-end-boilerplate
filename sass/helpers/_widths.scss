@@ -2,17 +2,21 @@
 //
 // Generate some width helper classes.
 
+@use 'sass:math';
+@use 'settings/breakpoint';
+@use 'tools/media';
+
 @for $i from 1 through 12 {
     .h-#{$i} {
-        width: percentage($i / 12);
+        width: math.percentage($i / 12);
     }
 }
 
-@each $breakpoint, $value in $breakpoints {
-    @include mq($breakpoint) {
+@each $breakpoint, $size in breakpoint.$sizes {
+    @include media.query($breakpoint) {
         @for $i from 1 through 12 {
             .h-#{$i}-#{$breakpoint} {
-                width: percentage($i / 12);
+                width: math.percentage($i / 12);
             }
         }
     }

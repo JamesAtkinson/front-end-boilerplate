@@ -2,11 +2,15 @@
 //
 // Base styles for page-level elements.
 
+@use 'settings/colour';
+@use 'settings/type';
+@use 'tools/font';
+
 html {
-    @include base-font-size;
-    background-color: $white;
-    color: $black;
-    font-family: $font-family-sans-serif;
-    font-weight: $font-weight-regular;
+    @include font.base;
+    background-color: colour.$white;
+    color: colour.$black;
+    font-family: type.$family-sans-serif;
+    font-weight: type.$weight-regular;
     line-height: 1.5;
 }

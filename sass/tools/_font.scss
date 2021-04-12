@@ -1,0 +1,53 @@
+// FONT
+//
+// Generate responsive font-sizes.
+
+@use 'sass:math';
+@use 'settings/type';
+@use 'tools/media';
+
+@mixin base {
+
+    // Loop over each size in type.$sizes.
+    @each $size, $map in type.$sizes {
+
+        // Get the breakpoint and base.
+        $breakpoint: map-get($map, 'breakpoint');
+        $base: map-get($map, 'base');
+
+        // Generate the font-size.
+        $font-size: math.percentage($base / 16);
+
+        // Check for breakpoints and set the font-size.
+        @if $breakpoint == null {
+            font-size: $font-size;
+        } @else {
+            @include media.query($breakpoint) {
+                font-size: $font-size;
+            }
+        }
+    }
+}
+
+@mixin size($font-size-value) {
+
+    // Loop over each size in type.$sizes.
+    @each $size, $map in type.$sizes {
+
+        // Get the breakpoint and scale.
+        $breakpoint: map-get($map, 'breakpoint');
+        $scale: map-get($map, 'scale');
+
+        // Generate the font-size.
+        $font-size: math.pow($scale, $font-size-value) * 1rem;
+
+        // Check for breakpoints and set the font-size.
+        @if $breakpoint == null {
+            font-size: $font-size;
+        } @else {
+            @include media.query($breakpoint) {
+                font-size: $font-size;
+            }
+        }
+    }
+}

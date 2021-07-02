@@ -1,0 +1,28 @@
+// SPACING
+//
+// Generate some spacing helper classes.
+
+@use 'settings/spacing';
+
+$properties: margin, padding;
+
+$directions: top, right, bottom, left;
+
+$sizes: (
+    'none': 0,
+    'tiny': spacing.$tiny,
+    'small': spacing.$small,
+    'medium': spacing.$medium,
+    'large': spacing.$large,
+    'huge': spacing.$huge
+);
+
+@each $property in $properties {
+    @each $direction in $directions {
+        @each $size, $value in $sizes {
+            .h-#{$property}-#{$direction}-#{$size} {
+                #{$property}-#{$direction}: $value;
+            }
+        }
+    }
+}

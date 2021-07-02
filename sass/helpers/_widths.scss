@@ -8,7 +8,7 @@
 
 @for $i from 1 through 12 {
     .h-#{$i} {
-        width: math.percentage($i / 12);
+        width: math.percentage(math.div($i, 12));
     }
 }
 
@@ -16,7 +16,7 @@
     @include media.query($breakpoint) {
         @for $i from 1 through 12 {
             .h-#{$i}-#{$breakpoint} {
-                width: math.percentage($i / 12);
+                width: math.percentage(math.div($i, 12));
             }
         }
     }

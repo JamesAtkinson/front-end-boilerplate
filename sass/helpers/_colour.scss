@@ -1,0 +1,19 @@
+// COLOUR
+//
+// Generate some colour helper classes.
+
+@use 'settings/colour';
+
+$colours: (
+    'black': colour.$black,
+    'white': colour.$white,
+    'red': colour.$red,
+    'green': colour.$green,
+    'blue': colour.$blue
+);
+
+@each $colour, $value in $colours {
+    .h-colour-#{$colour} {
+        color: $value;
+    }
+}

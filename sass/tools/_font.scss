@@ -16,7 +16,7 @@
         $base: map-get($map, 'base');
 
         // Generate the font-size.
-        $font-size: math.percentage($base / 16);
+        $font-size: math.percentage(math.div($base, 16));
 
         // Check for breakpoints and set the font-size.
         @if $breakpoint == null {

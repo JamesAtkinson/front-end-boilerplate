@@ -1,0 +1,29 @@
+// HEADINGS
+//
+// Some helper classes for heading font sizes.
+
+@use 'tools/font';
+
+.h1 {
+    @include font.size(4);
+}
+
+.h2 {
+    @include font.size(3);
+}
+
+.h3 {
+    @include font.size(2);
+}
+
+.h4 {
+    @include font.size(1);
+}
+
+.h5 {
+    @include font.size(0);
+}
+
+.h6 {
+    @include font.size(-1);
+}

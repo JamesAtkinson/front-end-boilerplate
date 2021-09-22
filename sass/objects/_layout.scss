@@ -2,13 +2,55 @@
 //
 // A grid-like layout system built with flexbox.
 
+@use 'settings/breakpoint';
 @use 'settings/spacing';
+@use 'tools/media';
 
 .o-layout {
     display: flex;
     flex-wrap: wrap;
     margin-left: -(spacing.$small);
     margin-top: -(spacing.$small);
+}
+
+// Direction
+
+$direction-values: row, row-reverse, column, column-reverse;
+
+@each $value in $direction-values {
+    .o-layout--direction-#{$value} {
+        flex-direction: $value;
+    }
+}
+
+@each $breakpoint, $size in breakpoint.$sizes {
+    @include media.query($breakpoint) {
+        @each $value in $direction-values {
+            .o-layout--direction-#{$value}-#{$breakpoint} {
+                display: $value;
+            }
+        }
+    }
+}
+
+// Justify Content
+
+$justify-content-values: flex-start, flex-end, center, space-between, space-around, space-evenly;
+
+@each $value in $justify-content-values {
+    .o-layout--justify-content-#{$value} {
+        flex-direction: $value;
+    }
+}
+
+@each $breakpoint, $size in breakpoint.$sizes {
+    @include media.query($breakpoint) {
+        @each $value in $justify-content-values {
+            .o-layout--justify-content-#{$value}-#{$breakpoint} {
+                display: $value;
+            }
+        }
+    }
 }
 
 // Item

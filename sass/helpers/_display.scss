@@ -2,10 +2,23 @@
 //
 // Generate some display helper classes.
 
-$displays: none, block, inline, inline-block, flex;
+@use 'settings/breakpoint';
+@use 'tools/media';
 
-@each $display in $displays {
+$display-values: none, block, inline, inline-block, flex;
+
+@each $display in $display-values {
     .h-display-#{$display} {
         display: $display;
+    }
+}
+
+@each $breakpoint, $size in breakpoint.$sizes {
+    @include media.query($breakpoint) {
+        @each $display in $display-values {
+            .h-display-#{$display}-#{$breakpoint} {
+                display: $display;
+            }
+        }
     }
 }
